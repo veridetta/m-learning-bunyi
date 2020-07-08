@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         materi = findViewById(R.id.gel_bunyi);
         latihan = findViewById(R.id.latihan_soal);
         tentang = findViewById(R.id.tentang);
+
         // CARD KLIK
         petunjuk.setOnClickListener(new View.OnClickListener() {
             @Override

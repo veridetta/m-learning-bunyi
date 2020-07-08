@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PetunjukActivity">
+    tools:context=".KompetensiActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -32,7 +32,7 @@
                         android:textAllCaps="true"
                         android:gravity="center"
                         android:layout_gravity="center"
-                        android:text="Petunjuk \n Penggunaan"/>
+                        android:text="KOMPETENSI DASAR, INDIKATOR DAN TUJUAN PEMBELAJARAN"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -48,8 +48,67 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_12sdp"
                         android:layout_marginRight="@dimen/_12sdp"
-                        android:background="@color/green_400"
-                        android:padding="@dimen/_12sdp">
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_12sdp"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                android:text="Kompetensi Dasar"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_13sdp"
+                                android:text="Sub unit pembelajaran ini dikembangkan berdasarkan Kompetensi Dasar kelas XI:"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_8sdp"
+                                android:paddingLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_gravity=""
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_10sdp"
+                                    android:background="@color/red_400"
+                                    app:cardBackgroundColor="@color/red_400"
+                                    app:cardCornerRadius="@dimen/_30sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:text="KD 3.10 Menerapkan konsep dan prinsip gelombang bunyi dan cahaya dalam teknologi."/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_8sdp"
+                                android:paddingLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_gravity=""
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_10sdp"
+                                    android:background="@color/red_400"
+                                    app:cardBackgroundColor="@color/red_400"
+                                    app:cardCornerRadius="@dimen/_30sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:text="KD4.10 Melakukan percobaan tentang gelombang bunyi dan/atau cahaya, berikut presentasi hasil dan makna fisisnya misalnya sonometer, dan kisi difraksi."/>
+                            </LinearLayout>
+                        </LinearLayout>
                         <com.baoyachi.stepview.VerticalStepView
                             android:id="@+id/step_petunjuk"
                             android:layout_width="wrap_content"
