@@ -31,31 +31,31 @@ public class MainActivity extends AppCompatActivity {
                 klik("petunjuk");
             }
         });
-        petunjuk.setOnClickListener(new View.OnClickListener() {
+        kompetensi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 klik("kompetensi");
             }
         });
-        petunjuk.setOnClickListener(new View.OnClickListener() {
+        peta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 klik("peta");
             }
         });
-        petunjuk.setOnClickListener(new View.OnClickListener() {
+        materi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 klik("materi");
             }
         });
-        petunjuk.setOnClickListener(new View.OnClickListener() {
+        latihan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 klik("latihan");
             }
         });
-        petunjuk.setOnClickListener(new View.OnClickListener() {
+        tentang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 klik("tentang");
@@ -70,10 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 activity = PetunjukActivity.class;
                 break;
             case "kompetensi":
-                activity = PetunjukActivity.class;
+                activity = KompetensiActivity.class;
                 break;
             case "peta":
-                activity = PetunjukActivity.class;
+                activity = PetaKonsepActivity.class;
                 break;
             case "materi":
                 activity = PetunjukActivity.class;

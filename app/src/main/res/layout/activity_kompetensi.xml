@@ -38,16 +38,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_198sdp"
-                    android:paddingLeft="@dimen/_10sdp"
-                    android:paddingRight="@dimen/_10sdp"
                     android:paddingTop="@dimen/_10sdp"
                     android:paddingBottom="@dimen/_10sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_12sdp"
-                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_16sdp"
                         android:orientation="vertical">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -109,11 +107,117 @@
                                     android:text="KD4.10 Melakukan percobaan tentang gelombang bunyi dan/atau cahaya, berikut presentasi hasil dan makna fisisnya misalnya sonometer, dan kisi difraksi."/>
                             </LinearLayout>
                         </LinearLayout>
-                        <com.baoyachi.stepview.VerticalStepView
-                            android:id="@+id/step_petunjuk"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"/>
                     </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp">
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:background="@color/orange_400"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_16sdp"
+                            android:layout_marginRight="@dimen/_16sdp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_12sdp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textStyle="bold"
+                                    android:text="Indikator Kognitif"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:id="@+id/kognitif_judul"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp">
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:background="@color/green_400"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_16sdp"
+                            android:layout_marginRight="@dimen/_16sdp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_12sdp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textStyle="bold"
+                                    android:text="Indikator Keterampilan Komunikasi"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:text="1.	Menuliskan informasi dengan jelas dan dapat dimengerti
+                                    /n2.	Menuliskan ide/pendapat yang relevan dengan konten
+                                    /n3.	Memberikan representasi yang tepat secara ilmiah
+                                    /n4.	Mencantumkan sumber belajar/informasi yang digunakan"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_50sdp">
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:background="@color/yellow_400"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_16sdp"
+                            android:layout_marginRight="@dimen/_16sdp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_12sdp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textStyle="bold"
+                                    android:text="Tujuan Pembelajaran"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:text="Melalui kegiatan pembelajaran dengan menggunakan bahan ajar mobile learning berbasis multirepresentasi, peserta didik mampu mampu mengoptimalkan kemampuan kognitif dan keterampilan komunikasi dalam menerapkan prinsip Gelombang Bunyi dalam kehidupan sehari-hari."/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
                 </LinearLayout>
 
             </RelativeLayout>
