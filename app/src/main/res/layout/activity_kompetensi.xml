@@ -176,9 +176,9 @@
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/_13sdp"
                                     android:text="1.	Menuliskan informasi dengan jelas dan dapat dimengerti
-                                    /n2.	Menuliskan ide/pendapat yang relevan dengan konten
-                                    /n3.	Memberikan representasi yang tepat secara ilmiah
-                                    /n4.	Mencantumkan sumber belajar/informasi yang digunakan"/>
+                                    2.	Menuliskan ide/pendapat yang relevan dengan konten
+                                    3.	Memberikan representasi yang tepat secara ilmiah
+                                    4.	Mencantumkan sumber belajar/informasi yang digunakan"/>
                             </LinearLayout>
                         </LinearLayout>
                     </RelativeLayout>
@@ -222,42 +222,6 @@
 
             </RelativeLayout>
         </androidx.core.widget.NestedScrollView>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_alignParentBottom="true"
-            android:gravity="center">
-            <LinearLayout
-                android:background="@color/orange_200"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_height="@dimen/_30sdp">
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="false"
-                android:gravity="center">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_home"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/_20sdp">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="@dimen/_40sdp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:background="@color/blue_500"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-        </RelativeLayout>
+        <include layout="@layout/home_btn"/>
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,5 +1,6 @@
 package com.vrcorp.mobilelearningfisika_gelombangbunyi;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
@@ -21,6 +22,8 @@ public class PetunjukActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_petunjuk);
         verticalStepView = findViewById(R.id.step_petunjuk);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         home = findViewById(R.id.btn_home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override

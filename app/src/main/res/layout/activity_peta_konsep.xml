@@ -11,6 +11,8 @@
         android:id="@+id/peta_konsep_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:layout_gravity="center"
         android:background="@drawable/peta_konsep_r" />
+    <include layout="@layout/home_btn"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -2,27 +2,27 @@ package com.vrcorp.mobilelearningfisika_gelombangbunyi;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.View;
 
-public class LaunchActivity extends AppCompatActivity {
-
-    Intent intent;
+public class TentangActivity extends AppCompatActivity {
+    CardView home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launch);
+        setContentView(R.layout.activity_tentang);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        home = findViewById(R.id.btn_home);
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                intent = new Intent(getApplicationContext(),MainActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(TentangActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        },2000);
+        });
     }
 }
