@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -112,12 +113,14 @@ public class MekanismePendengaran extends AppCompatActivity {
                 }
                 if(anak.getNodeName().equals("gambar")){
                     // add ImageView
-                    ImageView iv = new ImageView(MekanismePendengaran.this);
+                    Display display = getWindowManager().getDefaultDisplay();
+                    ImageView iv = new ImageView(konten.getContext());
                     int resourceId = getResources().getIdentifier (anak.getTextContent(), "drawable", "com.vrcorp.mobilelearningfisika_gelombangbunyi");
                     iv.setImageResource(resourceId);
-                    float in = getResources().getDimension(R.dimen._90sdp);
-                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams( RelativeLayout.LayoutParams.MATCH_PARENT,  RelativeLayout.LayoutParams.WRAP_CONTENT);
-                    iv.setLayoutParams(layoutParams);
+                    iv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    //iv.setLayoutParams(parms);
+                    iv.setAdjustViewBounds(true);
+                   // float in = getResources().getDimension(R.dimen._90sdp);
                     konten.addView(iv);
                 }
                 if(anak.getNodeName().equals("video")){
@@ -163,4 +166,9 @@ public class MekanismePendengaran extends AppCompatActivity {
             }
         }catch (Exception e){e.printStackTrace();}
     }
+    public void ukuranGambar(ImageView imageView){
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams( RelativeLayout.LayoutParams.MATCH_PARENT,  RelativeLayout.LayoutParams.WRAP_CONTENT);
+        imageView.setLayoutParams(layoutParams);
+    }
+
 }
