@@ -36,6 +36,7 @@ public class PetunjukActivity extends AppCompatActivity {
         list0.add("Buka menu “Materi” untuk mempelajari materi dengan seksama");
         list0.add("Kerjakan latihan soal untuk mengasah kemampuan dan mengetahui perkembangan belajar");
         list0.add("Catatlah semua kesulitan yang anda alami dalam mempelajari M-learning dan tanyakan pada instruktur/guru");
+        list0.add("");
         verticalStepView.setStepsViewIndicatorComplectingPosition(list0.size() - 1)//设置完成的步数
                 .setTextSize(16)
                 .setStepViewUnComplectedTextColor(R.color.grey_800)
