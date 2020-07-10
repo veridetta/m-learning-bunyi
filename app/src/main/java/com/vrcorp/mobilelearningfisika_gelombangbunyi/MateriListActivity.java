@@ -2,11 +2,14 @@ package com.vrcorp.mobilelearningfisika_gelombangbunyi;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.vrcorp.mobilelearningfisika_gelombangbunyi.adapter.MateriAdapter;
 import com.vrcorp.mobilelearningfisika_gelombangbunyi.model.MateriModel;
@@ -26,6 +29,7 @@ public class MateriListActivity extends AppCompatActivity {
     private ArrayList<Integer> islamifavList;
     RecyclerView rc_cari;
     MateriAdapter mDataAdapter;
+    CardView home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,15 @@ public class MateriListActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         rc_cari = findViewById(R.id.rc_matlis);
+        home = findViewById(R.id.btn_home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(MateriListActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         islamijudulList= new ArrayList<>();
         islamigambarList= new ArrayList<String>();
         islamipenerbitList = new ArrayList<>();
@@ -58,7 +71,7 @@ public class MateriListActivity extends AppCompatActivity {
         islamijudulList.add("MANFAAT GELOMBANG BUNYI DALAM KEHIDUPAN");
         islamijudulList.add("DAFTAR PUSTAKA");
         islamigambarList.add("mekanisme");
-        islamigambarList.add("mekanisme");
+        islamigambarList.add("karakteristik");
         islamigambarList.add("mekanisme");
         islamigambarList.add("mekanisme");
         islamigambarList.add("mekanisme");

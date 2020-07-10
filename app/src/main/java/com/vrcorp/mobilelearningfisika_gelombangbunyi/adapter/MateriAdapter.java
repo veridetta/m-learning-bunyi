@@ -107,7 +107,7 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MyViewHold
             @Override
             public void onClick(View v) {
                 try {
-                    masukAktiviti(Class.forName(islamiurlList.get(position)),false);
+                    masukAktiviti(Class.forName(islamiurlList.get(position)),false,position);
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -125,10 +125,11 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MyViewHold
         //baperModelList.addAll(datas);
         notifyDataSetChanged();
     }
-    public void masukAktiviti(Class<?> to, boolean finish) {
+    public void masukAktiviti(Class<?> to, boolean finish,int positino) {
         Intent intent = new Intent(context, to);
+        intent.putExtra("materi",islamiphotoList.get(positino));
+        intent.putExtra("judul",islamijudulList.get(positino));
         context.startActivity(intent);
-
     }
 
 }

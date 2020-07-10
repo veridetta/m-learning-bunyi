@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".materi.MekanismePendengaran"></activity>
+        <activity android:name=".TesActivity"></activity>
+        <activity android:name=".LatihanSoal" />
+        <activity android:name=".LatihanList" />
+        <activity android:name=".materi.MekanismePendengaran" />
         <activity android:name=".MateriListActivity" />
         <activity android:name=".TentangActivity" />
         <activity android:name=".PetaKonsepActivity" />

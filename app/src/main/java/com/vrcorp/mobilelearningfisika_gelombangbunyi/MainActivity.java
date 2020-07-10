@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 activity = MateriListActivity.class;
                 break;
             case "latihan":
-                activity = PetunjukActivity.class;
+                activity = LatihanList.class;
                 break;
             case "tentang":
                 activity = TentangActivity.class;

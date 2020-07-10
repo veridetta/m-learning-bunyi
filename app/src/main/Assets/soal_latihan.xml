@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<latihan>
+    <soal>
+        <isi><teks>Algis sedang berdiri di samping tiang lampu merah. Dari kejauhan terdengar suara sirene ambulans meskipun mobil ambulans belum terlihat. Peristiwa ini menunjukkan bahwa bunyi dapat....</teks></isi>
+        <a><teks>bersuspensi dengan gelombang lain</teks></a>
+        <b><teks>beresonansi dengan udara sekitar</teks></b>
+        <c><teks>dipantulkan oleh benda sekitar</teks></c>
+        <d><teks>bertambah frekuensinya</teks></d>
+        <e><teks>merambat melalui medium udara</teks></e>
+        <kunci>e</kunci>
+        <pembahasan><teks>Salah satu sifat bunyi adalah merambat melalui medium udara. Bunyi dapat terdengar atau sampai ke telinga manusia karena merambat. Pada kasus dalam soal ini, kecepatan bunyi lebih besar dibandingkan kecepatan mobil. Oleh karena itu, bunyi sudah terdengar meskipun mobil belum terlihat</teks></pembahasan>
+    </soal>
+    <soal><isi><teks>Bunyi dengan panjang gelombang 2 m memiliki kecepatan rambat sebesar 340 m/s.  Nilai frekuensi yang dihasilkan sebesar ....Hz dan termasuk dalam kategori....</teks></isi>
+        <a><teks>0,0058, ultrasonik</teks></a>
+        <b><teks>0,0058, infrasonik</teks></b>
+        <c><teks>0,0017, audiosonik</teks></c>
+        <d><teks>170, audiosonik</teks></d>
+        <e><teks>170, infrasonik</teks></e>
+        <kunci>d</kunci>
+        <pembahasan>
+            <teks>Diketahui:
+                λ = 2 m, v = 340 m/s
+                Ditanya:
+                f dan kategori ?
+                Jawab:
+                a.	Mencari frekuensi terlebih dahulu:
+                f = ν / λ
+                = 340 / 2
+                = 170 Hz
+                b.	Bunyi dengan frekuensi antara 20 hingga 20000 Hz tergolong audiosonik
+            </teks>
+        </pembahasan>
+    </soal>
+</latihan>
