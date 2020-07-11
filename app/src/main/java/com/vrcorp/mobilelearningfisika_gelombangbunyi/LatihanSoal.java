@@ -35,7 +35,7 @@ import static java.lang.String.valueOf;
 public class LatihanSoal extends AppCompatActivity {
     LinearLayout soal, a_isi, b_isi, c_isi, d_isi, e_isi, pembahasan_isi, bahas_ly;
     CardView a, b, c,d,e,jawaban, pembahasan, next, cardJawab, home, close, hasil, tutup;
-    Integer nomor=0, siapBahas=0, benar=0;
+    Integer nomor=0, siapBahas=0, benar=0, noso=1;
     String kunci,jawab;
     boolean visible, maximal, sudahDijawab,siaplanjut;
     RelativeLayout penilaian;
@@ -51,10 +51,14 @@ public class LatihanSoal extends AppCompatActivity {
         hasil = findViewById(R.id.hasil);
         penilaian = findViewById(R.id.penilaian);
         tutup = findViewById(R.id.close);
+        home = findViewById(R.id.btn_home);
+        close = findViewById(R.id.btn_close);
         nilai = findViewById(R.id.nilai);
         totalBenar = findViewById(R.id.total_benar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+        jawabx=new ArrayList<String>();
+        kuncix=new ArrayList<String>();
         for(int x=0;x<15;x++){
             jawabx.add(null);
             kuncix.add(null);
@@ -63,23 +67,21 @@ public class LatihanSoal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(maximal){
+                    totalBenar.setText("Menjawab benar "+benar+" dari 15 soal");
                     penilaian.setVisibility(View.VISIBLE);
                     Integer ni = ((benar*2)/3)*10;
-                    nilai.setText(ni);
-                    totalBenar.setText("Menjawab benar "+benar+" dari 15 soal");
+                    nilai.setText(Integer.toString(ni));
                 }else{
                     Toast.makeText(v.getContext(),"Semua soal belum terjawab",Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        close.setOnClickListener(new View.OnClickListener() {
+        tutup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 penilaian.setVisibility(View.GONE);
             }
         });
-        home = findViewById(R.id.btn_home);
-        close = findViewById(R.id.btn_close);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +114,7 @@ public class LatihanSoal extends AppCompatActivity {
         c = findViewById(R.id.opsi_c);
         d = findViewById(R.id.opsi_d);
         e = findViewById(R.id.opsi_e);
-        ambilSoal(nomor);
+        ambilSoal(nomor,noso);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,12 +123,15 @@ public class LatihanSoal extends AppCompatActivity {
                 }else{
                     if(siaplanjut){
                         nomor++;
+                        noso++;
                         siapBahas=0;
                         siaplanjut=false;
                         sudahDijawab=false;
                         clearJawaban();
-                        ambilSoal(nomor);
-                        Toast.makeText(getApplicationContext(),valueOf(nomor),Toast.LENGTH_LONG).show();
+                        ambilSoal(nomor, noso);
+                        //Toast.makeText(getApplicationContext(),valueOf(nomor),Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Silahkan Cek Jawaban terlebih dahulu",Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -152,7 +157,6 @@ public class LatihanSoal extends AppCompatActivity {
         jawaban.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sudahDijawab=true;
                 cekJawaban(kunci,jawab,cardJawab);
                 siapBahas=2;
             }
@@ -165,7 +169,7 @@ public class LatihanSoal extends AppCompatActivity {
                 }else{
                     jawab="a";
                     cardJawab = a;
-                    siaplanjut=true;
+                    //siaplanjut=true;
                     pilihJawaban(a);
                 }
 
@@ -179,7 +183,7 @@ public class LatihanSoal extends AppCompatActivity {
                 }else{
                     jawab="b";
                     pilihJawaban(b);
-                    siaplanjut=true;
+                    //siaplanjut=true;
                     cardJawab = b;
                 }
 
@@ -194,7 +198,7 @@ public class LatihanSoal extends AppCompatActivity {
                     jawab="c";
                     pilihJawaban(c);
                     cardJawab = c;
-                    siaplanjut=true;
+                   // siaplanjut=true;
                 }
 
             }
@@ -207,7 +211,7 @@ public class LatihanSoal extends AppCompatActivity {
                 }else{
                     jawab="d";
                     pilihJawaban(d);
-                    siaplanjut=true;
+                   // siaplanjut=true;
                     cardJawab=d;
                 }
 
@@ -221,7 +225,7 @@ public class LatihanSoal extends AppCompatActivity {
                 }else{
                     jawab="e";
                     pilihJawaban(e);
-                    siaplanjut=true;
+                  //  siaplanjut=true;
                     cardJawab=e;
                 }
 
@@ -232,7 +236,7 @@ public class LatihanSoal extends AppCompatActivity {
         if( ly.getChildCount() > 0)
             ly.removeAllViews();
     }
-    public void ambilSoal(Integer nom){
+    public void ambilSoal(Integer nom, Integer noso){
         if(maximal){
             Toast.makeText(getApplicationContext(),"Sudah diakhir soal",Toast.LENGTH_LONG).show();
         }else{
@@ -265,9 +269,12 @@ public class LatihanSoal extends AppCompatActivity {
                     muatsoal("e",node,e_isi,nom);
                     muatsoal("kunci",node,e_isi,nom);
                     muatsoal("pembahasan",node,pembahasan_isi,nom);
-                    Integer noso=nom+1;
                     nomorSoal.setText("Latihan Soal No : "+noso);
-                    maximal=false;
+                    if(nList.getLength() - nom == 1){
+                        maximal=true;
+                    }else{
+                        maximal=false;
+                    }
                 }else{
                     maximal=true;
                 }
@@ -298,6 +305,8 @@ public class LatihanSoal extends AppCompatActivity {
                 }
             }
             siapBahas=2;
+            siaplanjut=true;
+            sudahDijawab=true;
         }else{
             Toast.makeText(getApplicationContext(),"Harap pilih jawaban terlebih dahulu",Toast.LENGTH_LONG).show();
         }
