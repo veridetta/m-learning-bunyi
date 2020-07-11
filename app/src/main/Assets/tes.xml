@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <latihan>
     <soal>
-        <isi>
-            <teks>Jika seorang astronot memukul genderang di bulan, ia tidak dapat mendengar suara tersebut karena....</teks>
-        </isi>
+        <isi><teks>Jika seorang astronot memukul genderang di bulan, ia tidak dapat mendengar suara tersebut karena....</teks></isi>
         <a><teks>gravitasi di bulan sangat kecil</teks></a>
         <b><teks>di bulan tidak ada udara sebagai perantara bunyi</teks></b>
         <c><teks>angkasa luar terlalu luas, tidak ada pemantulan bunyi</teks></c>
@@ -12,9 +10,7 @@
         <kunci>b</kunci>
     </soal>
     <soal>
-        <isi>
-            <teks>Anda berdiri di samping tiang lampu merah ketika sedang perjalanan ke sekolah. Dari kejauhan terdengar suara sirene ambulans meskipun mobil ambulans belum terlihat. Peristiwa ini menunjukkan bahwa bunyi dapat....</teks>
-        </isi>
+        <isi><teks>Anda berdiri di samping tiang lampu merah ketika sedang perjalanan ke sekolah. Dari kejauhan terdengar suara sirene ambulans meskipun mobil ambulans belum terlihat. Peristiwa ini menunjukkan bahwa bunyi dapat....</teks></isi>
         <a><teks>merambat melalui medium udara</teks></a>
         <b><teks>bersuspensi dengan gelombang lain</teks></b>
         <c><teks>beresonansi dengan udara sekitar</teks></c>

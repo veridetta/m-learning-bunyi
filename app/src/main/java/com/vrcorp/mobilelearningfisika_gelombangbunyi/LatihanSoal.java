@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -32,20 +34,50 @@ import static java.lang.String.valueOf;
 
 public class LatihanSoal extends AppCompatActivity {
     LinearLayout soal, a_isi, b_isi, c_isi, d_isi, e_isi, pembahasan_isi, bahas_ly;
-    CardView a, b, c,d,e,jawaban, pembahasan, next, cardJawab, home, close;
-    Integer nomor=0, siapBahas=0;
+    CardView a, b, c,d,e,jawaban, pembahasan, next, cardJawab, home, close, hasil, tutup;
+    Integer nomor=0, siapBahas=0, benar=0;
     String kunci,jawab;
-    boolean visible, maximal;
-    TextView nomorSoal;
+    boolean visible, maximal, sudahDijawab,siaplanjut;
+    RelativeLayout penilaian;
+    TextView nomorSoal, nilai, totalBenar;
     NodeList nList;
+    ArrayList<String> jawabx,kuncix;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_latihan_soal);
         nomorSoal = findViewById(R.id.nomor_soal);
         soal = findViewById(R.id.soal);
+        hasil = findViewById(R.id.hasil);
+        penilaian = findViewById(R.id.penilaian);
+        tutup = findViewById(R.id.close);
+        nilai = findViewById(R.id.nilai);
+        totalBenar = findViewById(R.id.total_benar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+        for(int x=0;x<15;x++){
+            jawabx.add(null);
+            kuncix.add(null);
+        }
+        hasil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(maximal){
+                    penilaian.setVisibility(View.VISIBLE);
+                    Integer ni = ((benar*2)/3)*10;
+                    nilai.setText(ni);
+                    totalBenar.setText("Menjawab benar "+benar+" dari 15 soal");
+                }else{
+                    Toast.makeText(v.getContext(),"Semua soal belum terjawab",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                penilaian.setVisibility(View.GONE);
+            }
+        });
         home = findViewById(R.id.btn_home);
         close = findViewById(R.id.btn_close);
         home.setOnClickListener(new View.OnClickListener() {
@@ -87,11 +119,15 @@ public class LatihanSoal extends AppCompatActivity {
                 if(maximal){
                     Toast.makeText(getApplicationContext(),"Sudah diakhir soal",Toast.LENGTH_LONG).show();
                 }else{
-                    nomor++;
-                    siapBahas=0;
-                    clearJawaban();
-                    ambilSoal(nomor);
-                    Toast.makeText(getApplicationContext(),valueOf(nomor),Toast.LENGTH_LONG).show();
+                    if(siaplanjut){
+                        nomor++;
+                        siapBahas=0;
+                        siaplanjut=false;
+                        sudahDijawab=false;
+                        clearJawaban();
+                        ambilSoal(nomor);
+                        Toast.makeText(getApplicationContext(),valueOf(nomor),Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
@@ -116,6 +152,7 @@ public class LatihanSoal extends AppCompatActivity {
         jawaban.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sudahDijawab=true;
                 cekJawaban(kunci,jawab,cardJawab);
                 siapBahas=2;
             }
@@ -123,41 +160,71 @@ public class LatihanSoal extends AppCompatActivity {
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jawab="a";
-                cardJawab = a;
-                pilihJawaban(a);
+                if(sudahDijawab){
+                        Toast.makeText(v.getContext(),"tidak dapat mengganti jawaban",Toast.LENGTH_SHORT).show();
+                }else{
+                    jawab="a";
+                    cardJawab = a;
+                    siaplanjut=true;
+                    pilihJawaban(a);
+                }
+
             }
         });
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jawab="b";
-                pilihJawaban(b);
-                cardJawab = b;
+                if(sudahDijawab){
+                    Toast.makeText(v.getContext(),"tidak dapat mengganti jawaban",Toast.LENGTH_SHORT).show();
+                }else{
+                    jawab="b";
+                    pilihJawaban(b);
+                    siaplanjut=true;
+                    cardJawab = b;
+                }
+
             }
         });
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jawab="c";
-                pilihJawaban(c);
-                cardJawab = c;
+                if(sudahDijawab){
+                    Toast.makeText(v.getContext(),"tidak dapat mengganti jawaban",Toast.LENGTH_SHORT).show();
+                }else{
+                    jawab="c";
+                    pilihJawaban(c);
+                    cardJawab = c;
+                    siaplanjut=true;
+                }
+
             }
         });
         d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jawab="d";
-                pilihJawaban(d);
-                cardJawab=d;
+                if(sudahDijawab){
+                    Toast.makeText(v.getContext(),"tidak dapat mengganti jawaban",Toast.LENGTH_SHORT).show();
+                }else{
+                    jawab="d";
+                    pilihJawaban(d);
+                    siaplanjut=true;
+                    cardJawab=d;
+                }
+
             }
         });
         e.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jawab="e";
-                pilihJawaban(e);
-                cardJawab=e;
+                if(sudahDijawab){
+                    Toast.makeText(v.getContext(),"tidak dapat mengganti jawaban",Toast.LENGTH_SHORT).show();
+                }else{
+                    jawab="e";
+                    pilihJawaban(e);
+                    siaplanjut=true;
+                    cardJawab=e;
+                }
+
             }
         });
     }
@@ -211,6 +278,7 @@ public class LatihanSoal extends AppCompatActivity {
         if(siapBahas>0){
             if(kunci.equals(jawaban)){
                 pilihian.setCardBackgroundColor(getResources().getColor(R.color.green_400));
+                benar++;
             }else{
                 pilihian.setCardBackgroundColor(getResources().getColor(R.color.red_400));
                 if(a.getTag().equals(kunci)){

@@ -332,10 +332,118 @@
                                     android:text="Soal Selanjutnya"/>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/hasil"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp"
+                            app:cardMaxElevation="@dimen/_4sdp"
+                            app:cardBackgroundColor="@color/green_A700"
+                            app:cardUseCompatPadding="true">
+                            <LinearLayout
+                                android:padding="@dimen/_10sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:text="Lihat Hasil"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
         <include layout="@layout/home_back_btn"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/penilaian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_700"
+                android:alpha="0.6"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_3sdp"
+                app:cardMaxElevation="@dimen/_4sdp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nilai Latihan Kamu :"
+                        android:textSize="@dimen/_12sdp"/>
+                    <TextView
+                        android:id="@+id/nilai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="80"
+                        android:textColor="@color/green_400"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_90sdp"/>
+                    <TextView
+                        android:id="@+id/total_benar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Menjawab benar 5 dari 15 soal"
+                        android:textSize="@dimen/_12sdp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Teruslah berlatih, jangan patah semangat!"
+                        android:textSize="@dimen/_12sdp"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/close"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp"
+                        app:cardMaxElevation="@dimen/_4sdp"
+                        app:cardBackgroundColor="@color/green_A700"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:padding="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_13sdp"
+                                android:text="Tutup"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
