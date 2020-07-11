@@ -112,9 +112,9 @@
                 vp= 0
                 pendengar diam, sumber mendekati pendengar
             </teks>
-            <gambar>1</gambar>
+            <gambar>a</gambar>
             <teks>pendengar diam, sumber manjauhi pendengar</teks>
-            <gambar>2</gambar>
+            <gambar>b</gambar>
             <teks>Jadi, pernyataan yang benar yaitu frekuensi yang didengar saat mobil mendekat (850 Hz) lebih besar dari frekuensi yang dikeluarkan mobil (800 Hz)</teks>
         </pembahasan>
     </soal>
@@ -122,18 +122,18 @@
         <isi>
             <teks>Seorang anak dan sebuah mobil ambulan bergerak saling menjauhi. Mobil ambulan membunyikan sirine berfrekuensi fs dan bergerak dengan kecepatan vs, sedangkan anak bergerak dengan kecepatan vp. Jika cepat rambat bunyi v dan bunyi sirine yang didengar oleh anak fp berdasarkan asas doppler adalah....</teks>
         </isi>
-        <a><gambar>3</gambar></a>
-        <b><gambar>4</gambar></b>
-        <c><gambar>5</gambar></c>
-        <d><gambar>6</gambar></d>
-        <e><gambar>7</gambar></e>
+        <a><gambar>c</gambar></a>
+        <b><gambar>d</gambar></b>
+        <c><gambar>e</gambar></c>
+        <d><gambar>f</gambar></d>
+        <e><gambar>g</gambar></e>
         <kunci>a</kunci>
         <pembahasan>
             <teks>Mobil bergerak menjauhi pendengar, maka vp bernilai negatif (-)
                 Sang anak bergerak menjauhi sumber, maka vs bernilai positif (+)
                 Sehingga persamaan yang terbentuk adalah
             </teks>
-            <gambar>8</gambar>
+            <gambar>h</gambar>
         </pembahasan>
     </soal>
     <soal>
@@ -148,7 +148,7 @@
         <kunci>d</kunci>
         <pembahasan>
             <teks>Untuk mengerjakan soal di atas, kita bisa perhatikan tabel berikut:</teks>
-            <gambar>9</gambar>
+            <gambar>i</gambar>
         </pembahasan>
     </soal>
     <soal>
@@ -163,9 +163,9 @@
         <kunci>c</kunci>
         <pembahasan>
             <teks>Pendengar diam, sumber bunyi mendekati.</teks>
-            <gambar>10</gambar>
+            <gambar>j</gambar>
             <teks>Sumber bunyi diam, pendengar mendekati.</teks>
-            <gambar>11</gambar>
+            <gambar>k</gambar>
             <gambar>karena v^2> (v^2-V^2) maka
                 sehingga f_p1> f_p2
                 Jadi frekuensi yang didengar oleh pendengar yang diam (sumber mendekati) akan lebih tinggi daripada frekuensi yang didengar pendengar yang bergerak mendekati (sumber diam).
@@ -175,7 +175,7 @@
     <soal>
         <isi>
             <teks>Seorang pengamat berada pada sejauh R dari sumber bunyi. Hubungan kecepatan pengamat bergerak terhadap frekuensi bunyi yang terdengar oleh pengamat ditunjukkan oleh grafik berikut</teks>
-            <gambar>12</gambar>
+            <gambar>l</gambar>
             <teks>Jika kecepatan bunyi di udara sebesar 340 m/s, maka garis AB pada grafik di atas menunjukkan bahwa ....</teks>
         </isi>
         <a><teks>sumber bunyi bergerak mendekat ke pengamat</teks></a>
@@ -205,7 +205,7 @@
                 f 1= 600 Hz
                 Ditanyakan: F?
             </teks>
-            <gambar>13</gambar>
+            <gambar>m</gambar>
         </pembahasan>
     </soal>
     <soal>
@@ -227,7 +227,7 @@
                 Jawab:
                 Frekuensi nada dasar
             </teks>
-            <gambar>14</gambar>
+            <gambar>n</gambar>
             <teks>Frekuensi nada atas ke 1 dan ke 2</teks>
             <teks>f1=3(125)=375 Hz
                 f2=5(125)=625 Hz
@@ -245,7 +245,7 @@
         <e><teks>900 W.m-2</teks></e>
         <kunci>a</kunci>
         <pembahasan>
-            <gambar>15</gambar>
+            <gambar>o</gambar>
         </pembahasan>
     </soal>
     <soal>
@@ -260,7 +260,7 @@
         <kunci>b</kunci>
         <pembahasan>
             <teks>Karena secara matematis hubungan intensitas dan jarak dinyatakan oleh</teks>
-            <gambar>16</gambar>
+            <gambar>p</gambar>
         </pembahasan>
     </soal>
     <soal>
