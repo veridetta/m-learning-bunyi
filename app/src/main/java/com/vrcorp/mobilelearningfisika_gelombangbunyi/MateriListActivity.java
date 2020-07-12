@@ -72,8 +72,8 @@ public class MateriListActivity extends AppCompatActivity {
         islamijudulList.add("DAFTAR PUSTAKA");
         islamigambarList.add("mekanisme");
         islamigambarList.add("karakteristik");
-        islamigambarList.add("mekanisme");
-        islamigambarList.add("mekanisme");
+        islamigambarList.add("cepatrambat");
+        islamigambarList.add("sifatgelombang");
         islamigambarList.add("mekanisme");
         islamigambarList.add("mekanisme");
         islamigambarList.add("mekanisme");

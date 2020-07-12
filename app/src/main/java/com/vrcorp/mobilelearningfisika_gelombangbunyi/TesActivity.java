@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -44,6 +45,7 @@ public class TesActivity extends AppCompatActivity {
     LinearLayout ly_soal;
     EditText nama, kelas;
     CardView selesai;
+    Integer nomorsoal=1, nomorlain=-1;
     ArrayList<String> jawab,kunci;
     boolean connected = false;
     @Override
@@ -115,18 +117,35 @@ public class TesActivity extends AppCompatActivity {
             Element element = doc.getDocumentElement();
             element.normalize();
             NodeList nList = doc.getElementsByTagName("soal");
-            Log.d("TOTAL", "onCreate: "+nList.getLength());
-            for (int i=0;i<nList.getLength();i++){
-              NodeList isi = nList.item(i).getChildNodes();
-              for(int a=0;a<isi.getLength();a++) {
-                   Node xjenis = isi.item(a);
+            //Log.d("TOTAL", "onCreate: "+nList.getLength());
+            for (int xz=0;xz<nList.getLength();xz++){
+              NodeList isix = nList.item(xz).getChildNodes();
+                Log.d("total soal kecil", "onCreate: "+isix.getLength());
+              for(int a=0;a<isix.getLength();a++) {
+                   Node xjenis = isix.item(a);
                    if (xjenis.getNodeName().equals("kunci")) {
-                       kunci.set(i, isi.item(a).getTextContent());
+                       kunci.set(xz, isix.item(a).getTextContent());
                    }
                   if(xjenis.getNodeName().equals("isi")){
+                      TextView textView = new TextView(this);
+                      textView.setText("Soal Nomor "+nomorsoal);
+                      textView.setId(nomorsoal);
+                      LinearLayout.LayoutParams ly = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                              LinearLayout.LayoutParams.WRAP_CONTENT);
+                      ly.setMargins(10,3,2,3);
+                      textView.setMinLines(1);
+                      textView.setLayoutParams(ly);
+                      //tv.setTextSize(16);
+                      textView.setTypeface(Typeface.DEFAULT_BOLD);
+                      textView.setTextColor(getResources().getColor(R.color.black));
+                      textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                              getResources().getDimension(R.dimen._14sdp));
+                      textView.setPadding(4, 3, 0, 3);
+                      textView.setIncludeFontPadding (false);
+                      ly_soal.addView(textView);
                       getRinci(ly_soal,xjenis.getChildNodes());
+                      Log.d("Nomor Soal", "onCreate: "+nomorsoal);
                   }
-
               }
                 LayoutInflater inflater = (LayoutInflater)      this.getSystemService(LAYOUT_INFLATER_SERVICE);
                 View childLayout = inflater.inflate(R.layout.pg, ly_soal,false);
@@ -143,18 +162,15 @@ public class TesActivity extends AppCompatActivity {
                 c = childLayout.findViewById(R.id.opsi_c);
                 d = childLayout.findViewById(R.id.opsi_d);
                 e = childLayout.findViewById(R.id.opsi_e);
-                Log.d("TOTAL", "onCreate: "+isi.item(i).getTextContent());
-                //list("isi",isi, "soal",this,childLayout,a_isi,xa);
-                list("a",isi, "opsi",this,childLayout,a_isi,xa);
-                list("b",isi, "opsi",this,childLayout,b_isi,b);
-                list("c",isi, "opsi",this,childLayout,c_isi,c);
-                list("d",isi, "opsi",this,childLayout,d_isi,d);
-                list("e",isi, "opsi",this,childLayout,e_isi,e);
-                final int finalI = i;
+                list("a",isix, "opsi",this,childLayout,a_isi,xa);
+                list("b",isix, "opsi",this,childLayout,b_isi,b);
+                list("c",isix, "opsi",this,childLayout,c_isi,c);
+                list("d",isix, "opsi",this,childLayout,d_isi,d);
+                list("e",isix, "opsi",this,childLayout,e_isi,e);
                 xa.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(finalI, "a");
+                        jawab.set(nomorlain, "a");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -166,7 +182,7 @@ public class TesActivity extends AppCompatActivity {
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(finalI, "b");
+                        jawab.set(nomorlain, "b");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -180,7 +196,7 @@ public class TesActivity extends AppCompatActivity {
                 c.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(finalI, "c");
+                        jawab.set(nomorlain, "c");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -192,7 +208,7 @@ public class TesActivity extends AppCompatActivity {
                 d.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(finalI, "d");
+                        jawab.set(nomorlain, "d");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -204,7 +220,7 @@ public class TesActivity extends AppCompatActivity {
                 e.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(finalI, "e");
+                        jawab.set(nomorlain, "e");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -213,7 +229,8 @@ public class TesActivity extends AppCompatActivity {
                         e.setCardBackgroundColor(getResources().getColor(R.color.yellow_400));
                     }
                 });
-
+                nomorlain++;
+                nomorsoal++;
             }
         }catch (Exception e){e.printStackTrace();}
     }
@@ -232,24 +249,23 @@ public class TesActivity extends AppCompatActivity {
     public void getRinci(LinearLayout linearLayout, NodeList list){
         for(int u=0;u<list.getLength();u++){
             Node rinci = list.item(u);
-            if(rinci.getNodeName().equals("teks")){
-                Log.d("Isi a dalem", "list: "+rinci.getTextContent());
-                TextView textView = new TextView(this);
-                textView.setText(rinci.getTextContent());
-                textView.setId(u);
-                LinearLayout.LayoutParams ly = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT);
-                ly.setMargins(10,3,2,3);
-                textView.setMinLines(1);
-                textView.setLayoutParams(ly);
-                //tv.setTextSize(16);
-                textView.setTextColor(getResources().getColor(R.color.black));
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                        getResources().getDimension(R.dimen._13sdp));
-                textView.setPadding(4, 3, 0, 3);
-                textView.setIncludeFontPadding (false);
-                linearLayout.addView(textView);
-            }
+                if(rinci.getNodeName().equals("teks")){
+                    TextView textView = new TextView(this);
+                    textView.setText(rinci.getTextContent());
+                    textView.setId(u);
+                    LinearLayout.LayoutParams ly = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT);
+                    ly.setMargins(10,3,2,3);
+                    textView.setMinLines(1);
+                    textView.setLayoutParams(ly);
+                    //tv.setTextSize(16);
+                    textView.setTextColor(getResources().getColor(R.color.black));
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                            getResources().getDimension(R.dimen._13sdp));
+                    textView.setPadding(4, 3, 0, 3);
+                    textView.setIncludeFontPadding (false);
+                    linearLayout.addView(textView);
+                }
             if(rinci.getNodeName().equals("gambar")){
                 // add ImageView
                 Display display = getWindowManager().getDefaultDisplay();

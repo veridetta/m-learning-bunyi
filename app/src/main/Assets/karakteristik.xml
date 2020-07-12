@@ -17,6 +17,7 @@
     <ket>Gambar 6. Otto Von Guericeke
         Sumber: www.daviddarling.info
     </ket>
+    <teks>Ilustrasi percobaan yang mirip dengan yang telah dilakukan oleh ilmuwan tersebut dapat dilihat pada Gambar 7, dan Video 4, dimana jam beker pertama ditutup oleh tabung vakum (Gambar 7a). Sedangkan jam beker kedua (Gambar 7b) tidak ditutup tabung vakum.</teks>
     <gambar>bg4</gambar>
     <ket>Gambar 7. (a) jam beker di dalam tabung vakum (b) jam beker yang berada di ruang terbuka. Sumber: books.google.co.id</ket>
     <ket>Simak video berikut!</ket>
@@ -24,11 +25,11 @@
     <ket>Video 4. Percobaan sebuah bel yang dibunyikan di dalam tabung vakum
         Sumber: https://www.youtube.com/watch?v=h0L6YpWh0KM
     </ket>
-    <ket>Perhatikan Animasi berikut!</ket>
+    <!--<ket>Perhatikan Animasi berikut!</ket>
     <web>bw1</web>
     <ket>Animasi 1. Percobaan sebuah mainan drum kecil yang dibunyikan di dalam tabung vakum
         Sumber: www.animations.physics.unsw.edu.au
-    </ket>
+    </ket>-->
     <coba>
         <judul>
               Aspek Kognitif: Membandingkan fenomena perambatan bunyi dalam ruang hampa dan ruang terbuka
@@ -48,20 +49,22 @@
     <gambar>bg6</gambar>
     <ket>Gambar 9. Getaran senar gitar dengan (a) simpangan kecil dan (b) simpangan besar. Sumber: books.google.co.id
     </ket>
-    <ket>Senar yang dipetik dengan simpangan besar akan berbunyi lebih kuat daripada dipetik dengan simpangan kecil (Gambar 9). Dalam hal ini, simpangan yang anda berikan pada senar merupakan amplitudo. Perhatikan Animasi 2 tentang amplitudo yang mempengaruhi kuat bunyi sebagai berikut!</ket>
-    <web>bw2</web>
+    <ket>Senar yang dipetik dengan simpangan besar akan berbunyi lebih kuat daripada dipetik dengan simpangan kecil (Gambar 9). Dalam hal ini, simpangan yang anda berikan pada senar merupakan amplitudo. </ket>
+    <!--<web>bw2</web>
     <ket>Animasi 2. Amplitudo Mempengaruh Kuat Bunyi
         Sumber: www.animations.physics.unsw.edu.au
-    </ket>
-    <teks>Seperti yang terlihat pada Animasi 2 menunjukkan bahwa semakin besar amplitudo, semakin besar kuat bunyi dan sebaliknya. Jadi kekuatan bunyi ditentukan oleh besarnya amplitudo bunyi tersebut. Bila dua sumber bunyi yang kerasnya sama, tetapi jarak antara sumber bunyi dengan pendengar berbeda maka sumber bunyi yang lebih dekat dengan pendengar akan terdengar lebih kuat. Jadi, dapat disimpulkan bahwa faktor-faktor yang memengaruhi kuat bunyi adalah (a) amplitudo,(b) jarak sumber bunyi dari pendengar,dan (c) jenis medium.</teks>
-    <teks>Apakah kalian mengetahuu bahwa pada orang dewasa, suara perempuan lebih tinggi dibandingkan suara laki-laki? Pita suara laki-laki yang bentuknya lebih panjang dan berat, mengakibatkan laki-laki memiliki nada dasar sebesar 125 Hz, sedangkan perempuan memiliki nada dasar satu oktaf (dua kali lipat) lebih tinggi, yaitu sekitar 250 Hz. Bunyi dengan frekuensi tinggi akan menyebabkan telinga sakit dan nyeri karena gendang telinga ikut bergetar lebih cepat. Tinggi rendahnya nada ini ditentukan oleh frekuensi bunyi tersebut. Semakin besar frekuensi bunyi, maka akan semakin tinggi nadanya. Sebaliknya, jika frekuensi bunyi kecil, maka nada akan semakin rendah seperti yang terlihat pada Animasi 3 dan Simulasi 1 berikut ini.</teks>
-    <web>bw3</web>
+    </ket>-->
+    <teks>Jadi kekuatan bunyi ditentukan oleh besarnya amplitudo bunyi tersebut. Bila dua sumber bunyi yang kerasnya sama, tetapi jarak antara sumber bunyi dengan pendengar berbeda maka sumber bunyi yang lebih dekat dengan pendengar akan terdengar lebih kuat. Jadi, dapat disimpulkan bahwa faktor-faktor yang memengaruhi kuat bunyi adalah (a) amplitudo,(b) jarak sumber bunyi dari pendengar,dan (c) jenis medium.</teks>
+    <teks>Apakah kalian mengetahuu bahwa pada orang dewasa, suara perempuan lebih tinggi dibandingkan suara laki-laki? Pita suara laki-laki yang bentuknya lebih panjang dan berat, mengakibatkan laki-laki memiliki nada dasar sebesar 125 Hz, sedangkan perempuan memiliki nada dasar satu oktaf (dua kali lipat) lebih tinggi, yaitu sekitar 250 Hz. Bunyi dengan frekuensi tinggi akan menyebabkan telinga sakit dan nyeri karena gendang telinga ikut bergetar lebih cepat. Tinggi rendahnya nada ini ditentukan oleh frekuensi bunyi tersebut. Semakin besar frekuensi bunyi, maka akan semakin tinggi nadanya. Sebaliknya, jika frekuensi bunyi kecil, maka nada akan semakin rendah.</teks>
+    <!--<web>bw3</web>
     <ket>Animasi 3. Frekuensi Mempengaruh Tinggi Rendah Nada
         Sumber: www.animations.physics.unsw.edu.au
-    </ket>
+    </ket>-->
+    <!--
     <ket>Cobalah Simulasi berikut ini!</ket>
     <web>bw4</web>
     <ket>Simulasi 1. Amplitudo Mempengaruh Kuat Bunyi dan Frekuensi Mempengaruh Tinggi Rendah Nada. Sumber: phet.colorado.edu</ket>
+    -->
     <teks>Bagaimana dengan bunyi gitar? Mengapa gitar dapat menghasilkan nada yang berbeda-beda? Agar mengetahui faktor-faktor yang menentukan tinggi rendah nada pada dawai atau senar simak Video 5 berikut ini.</teks>
     <video>bv3</video>
     <ket>Video 5. Suara dawai dengan frekuensi yang berbeda
@@ -101,15 +104,16 @@
     <ket>Video 6. Ilustrasi Orkestra
         Sumber: https://www.youtube.com/watch?v=EdeBDir5DwA
     </ket>
-    <teks>Ketika sebuah flute dan violin memainkan lagu yang sama, anda masih dapat membedakan suara kedua alat musik tersebut (Video 6). Meskipun kedua alat musik tersebut mempunyai frekuensi yang sama, tetapi bunyi yang dihasilkan oleh kedua sumber bunyi tersebut bersifat unik.  Untuk melihat bentuk gelombang bunyi dalam setiap instrumen bunyi perhatikan Gambar 11 dan Animasi 4 berikut ini.</teks>
+    <teks>Ketika sebuah flute dan violin memainkan lagu yang sama, anda masih dapat membedakan suara kedua alat musik tersebut (Video 6). Meskipun kedua alat musik tersebut mempunyai frekuensi yang sama, tetapi bunyi yang dihasilkan oleh kedua sumber bunyi tersebut bersifat unik.  Untuk melihat bentuk gelombang bunyi dalam setiap instrumen bunyi perhatikan Gambar 11.</teks>
     <gambar>bg9</gambar>
     <ket>Gambar 11. Bentuk Gelombang Bunyi dalam Setiap Instrumen Bunyi
         Sumber: simplyfyingtheory.com
     </ket>
-    <web>bw5</web>
+    <!--<web>bw5</web>
     <ket>Animasi 4. Bentuk Gelombang Bunyi dalam Setiap Instrumen Bunyi
         Sumber: www.animations.physics.unsw.edu.au
     </ket>
+    -->
     <teks>Keunikan setiap bunyi dengan bunyi lainnya meskipun mempunyai frekuensi yang sama disebut sebagai warna bunyi. Dapatkah anda menyebutkan contoh lain yang menunjukkan bahwa bunyi memiliki warna yang berbeda meskipun frekuensinya sama?</teks>
     <subjudul>3.	Frekuensi Bunyi</subjudul>
     <teks>Apakah  telinga manusia dapat mendengarkan semua frekuensi bunyi? Tentu tidak, setiap makhluk hidup mempunyai ambang pendengaran yang berbeda-beda. Pendengaran manusia dan hewan tentu akan berbeda. Ada bunyi yang dapat didengar manusia, tetapi tidak oleh hewan dan sebaliknya. Jika Anda dapat mendengar semua rentang frekuensi, Anda tidak akan pernah beristirahat dengan tenang karena getaran-getaran rendah dari binatang tertentu atau getaran-getaran tinggi sekalipun akan terdengar. Menurut frekuensinya bunyi di bagi menjadi tiga kelompok, yaitu frekuensi infrasonik dengan rentang 0-20 Hz, frekuensi audible/audiosonik 20-20.000Hz, dan frekuensi ultrasonik dengan rentang > 20.000 Hz, seperti terlihat pada Gambar 12.</teks>
@@ -118,16 +122,17 @@
         Sumber: codelectron.com; www.wikiwand.com
     </ket>
     <teks>Berikut merupakan penjelasan tiap frekuensi bunyi (Gambar 12) yang dikelompokkan ke dalam tiga kelompok, yaitu ultrasonik, audiosonik, dan infrasonik.
-        a.	Bunyi yang mempunyai frekuensi di atas 20.000 Hz disebut ultrasonik. Bunyi ini dapat didengar oleh beberapa hewan seperti kucing, anjing, lumba-lumba, kelelawar dan jenis hewan lainnya. Kelelawar menggunakan frekuensi ini sebagai navigasi ketika terbang di kegelapan. Kelelawar dapat menemukan jalan atau mangsanya dengan cara mengeluarkan bunyi ultrasonik, seperti terlihat pada Gambar 13 dan Animasi 5.
+        a.	Bunyi yang mempunyai frekuensi di atas 20.000 Hz disebut ultrasonik. Bunyi ini dapat didengar oleh beberapa hewan seperti kucing, anjing, lumba-lumba, kelelawar dan jenis hewan lainnya. Kelelawar menggunakan frekuensi ini sebagai navigasi ketika terbang di kegelapan. Kelelawar dapat menemukan jalan atau mangsanya dengan cara mengeluarkan bunyi ultrasonik, seperti terlihat pada Gambar 13.
     </teks>
     <gambar>bg11</gambar>
     <ket>Gambar 13. Sistem Sonar pada Kelelawar
         Sumber: McGraw-Hill, 2007, www.hngn.com
     </ket>
-    <web>bw6</web>
+    <!--<web>bw6</web>
     <ket>Animasi 5. Sistem Sonar pada Kelelawar
         Sumber: www.animations.physics.unsw.edu.au
     </ket>
+    -->
     <teks>Bunyi ini akan dipantulkan oleh benda-benda di sekelilingnya, kemudian pantulan bunyi ini dapat ditangkap kembali sehingga kelelawar dapat mengetahui jarak dirinya dengan benda-benda di sekitarnya. Sonar atau Sound Navigation and Ranging merupakan suatu metode penggunaan gelombang ultrasonik untuk menaksir ukuran, bentuk, letak, dan kedalaman benda-benda. Gelombang yang dikeluarkan akan dipantulkan kembali oleh objek yang akan dilewatinya dan diterima oleh receiver (alat penerima) yang berada di tubuh  kelelawar, dapat dilihat pada Gambar 14. Kemampuan kelelawar untuk menentukan lokasi ini disebut dengan ekolokasi.</teks>
     <gambar>bg12</gambar>
     <ket>Gambar 14. Sistem Ekolokasi pada Kelelawar

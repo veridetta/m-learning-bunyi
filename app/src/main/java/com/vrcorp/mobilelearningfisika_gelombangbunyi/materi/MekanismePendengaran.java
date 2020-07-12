@@ -304,6 +304,44 @@ public class MekanismePendengaran extends AppCompatActivity {
                             linearLayout4.addView(tv);
 
                         }
+                        if(anak.getNodeName().equals("web")){
+                            LinearLayout linearLayout = new LinearLayout(this);
+                            linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                            konten.addView(linearLayout);
+                            WebView wb = new WebView(konten.getContext());
+                            wb.setWebChromeClient(new WebChromeClient());
+                            wb.clearCache(true);
+                            wb.clearHistory();
+                            wb.getSettings().setJavaScriptEnabled(true);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                                wb.getSettings().setMediaPlaybackRequiresUserGesture(false);
+                            }
+                            wb.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+                            wb.getSettings().setPluginState(WebSettings.PluginState.ON);
+                            wb.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+                            String path = "file:///android_asset/www/"+anak.getTextContent()+".html";
+                            wb.loadUrl(path);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                                linearLayout.addView(wb, 0, new LinearLayout.LayoutParams(
+                                        new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT)));
+                            }
+                        }
+                        if(anak.getNodeName().equals("ket")){
+                            Log.d("MODE", "onCreate: "+anak.getTextContent());
+                            // add TextView
+                            TextView tv = new TextView(this);
+                            tv.setText(anak.getTextContent());
+                            tv.setGravity(Gravity.CENTER);
+                            tv.setId(nomor);
+                            tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                                    LinearLayout.LayoutParams.WRAP_CONTENT));
+                            //tv.setTextSize(16);
+                            tv.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                    getResources().getDimension(R.dimen._13sdp));
+                            tv.setPadding(5, 3, 0, 3);
+                            konten.addView(tv);
+                        }
                     }
                     final EditText editText2 = new EditText(this);
                     editText2.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
