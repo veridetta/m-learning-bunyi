@@ -95,7 +95,9 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MyViewHold
         holder.tNama.setText(islamijudulList.get(position));
         Glide.with(holder.bg.getContext())
                 .load(getImage(islamiphotoList.get(position)))
-                .apply(RequestOptions.centerCropTransform())
+                .apply(RequestOptions.centerCropTransform()
+                        .centerCrop()
+                )
                 .into(new SimpleTarget<Drawable>() {
                     @Override
                     public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {

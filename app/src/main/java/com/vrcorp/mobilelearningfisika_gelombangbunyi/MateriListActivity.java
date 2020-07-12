@@ -79,8 +79,8 @@ public class MateriListActivity extends AppCompatActivity {
         islamigambarList.add("pelayangan");
         islamigambarList.add("sumberbunyi");
         islamigambarList.add("energidan");
-        islamigambarList.add("manfaate");
-        islamigambarList.add("daftarpusaka");
+        islamigambarList.add("manfaat");
+        islamigambarList.add("daftarpustaka");
         islamiurlList.add("com.vrcorp.mobilelearningfisika_gelombangbunyi.materi.MekanismePendengaran");
         islamiurlList.add("com.vrcorp.mobilelearningfisika_gelombangbunyi.materi.MekanismePendengaran");
         islamiurlList.add("com.vrcorp.mobilelearningfisika_gelombangbunyi.materi.MekanismePendengaran");
