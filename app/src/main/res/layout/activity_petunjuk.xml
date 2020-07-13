@@ -37,7 +37,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_198sdp"
+                    android:layout_marginTop="@dimen/_180sdp"
                     android:paddingLeft="@dimen/_10sdp"
                     android:paddingRight="@dimen/_10sdp"
                     android:paddingTop="@dimen/_10sdp"
@@ -50,11 +50,15 @@
                         android:layout_marginRight="@dimen/_12sdp"
                         android:background="@color/green_400"
                         android:padding="@dimen/_12sdp">
-                        <com.baoyachi.stepview.VerticalStepView
-                            android:id="@+id/step_petunjuk"
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingBottom="@dimen/_20sdp"/>
+                            android:text="Buka menu “Materi” untuk mempelajari materi dengan seksama \n
+\n Kerjakan latihan soal untuk mengasah kemampuan dan mengetahui perkembangan belajar \n
+\n Catatlah semua kesulitan yang anda alami dalam mempelajari M-learning dan tanyakan pada instruktur/guru"
+                            android:textStyle="normal"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"/>
                     </LinearLayout>
                 </LinearLayout>
 

@@ -45,7 +45,8 @@ public class TesActivity extends AppCompatActivity {
     LinearLayout ly_soal;
     EditText nama, kelas;
     CardView selesai;
-    Integer nomorsoal=1, nomorlain=-1;
+    Integer nomorsoal=1, nomorlain=0;
+    //String[] jawab,kunci;
     ArrayList<String> jawab,kunci;
     boolean connected = false;
     @Override
@@ -158,10 +159,16 @@ public class TesActivity extends AppCompatActivity {
                 d_isi = childLayout.findViewById(R.id.opsi_d_isi);
                 e_isi = childLayout.findViewById(R.id.opsi_e_isi);
                 xa = childLayout.findViewById(R.id.opsi_a);
+                xa.setTag(nomorlain);
                 b = childLayout.findViewById(R.id.opsi_b);
+                b.setTag(nomorlain);
                 c = childLayout.findViewById(R.id.opsi_c);
+                c.setTag(nomorlain);
                 d = childLayout.findViewById(R.id.opsi_d);
+                d.setTag(nomorlain);
                 e = childLayout.findViewById(R.id.opsi_e);
+                e.setTag(nomorlain);
+
                 list("a",isix, "opsi",this,childLayout,a_isi,xa);
                 list("b",isix, "opsi",this,childLayout,b_isi,b);
                 list("c",isix, "opsi",this,childLayout,c_isi,c);
@@ -170,7 +177,8 @@ public class TesActivity extends AppCompatActivity {
                 xa.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(nomorlain, "a");
+                        //Log.d("APAKA", "onCreate: "+xa.getTag());
+                        jawab.set(Integer.parseInt(v.getTag().toString()), "a");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -182,7 +190,7 @@ public class TesActivity extends AppCompatActivity {
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(nomorlain, "b");
+                        jawab.set(Integer.parseInt(v.getTag().toString()), "b");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -196,7 +204,7 @@ public class TesActivity extends AppCompatActivity {
                 c.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(nomorlain, "c");
+                        jawab.set(Integer.parseInt(v.getTag().toString()), "c");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -208,7 +216,7 @@ public class TesActivity extends AppCompatActivity {
                 d.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(nomorlain, "d");
+                        jawab.set(Integer.parseInt(v.getTag().toString()), "d");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -220,7 +228,7 @@ public class TesActivity extends AppCompatActivity {
                 e.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        jawab.set(nomorlain, "e");
+                        jawab.set(Integer.parseInt(v.getTag().toString()), "e");
                         xa.setCardBackgroundColor(getResources().getColor(R.color.white));
                         b.setCardBackgroundColor(getResources().getColor(R.color.white));
                         c.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -239,7 +247,7 @@ public class TesActivity extends AppCompatActivity {
             Node jenis = nodeList.item(a);
             if(parent.equals("opsi")){
                 if(jenis.getNodeName().equals(tipe)){
-                    opsi.setTag(tipe);
+                    //opsi.setTag(tipe);
                     getRinci(isi,jenis.getChildNodes());
 
                 }

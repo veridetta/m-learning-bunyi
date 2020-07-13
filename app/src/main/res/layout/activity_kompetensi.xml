@@ -175,10 +175,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/_13sdp"
-                                    android:text="1.	Menuliskan informasi dengan jelas dan dapat dimengerti
-                                    2.	Menuliskan ide/pendapat yang relevan dengan konten
-                                    3.	Memberikan representasi yang tepat secara ilmiah
-                                    4.	Mencantumkan sumber belajar/informasi yang digunakan"/>
+                                    android:text="1.	Menuliskan informasi dengan jelas dan dapat dimengerti \n 2.	Menuliskan ide/pendapat yang relevan dengan konten \n 3.	Memberikan representasi yang tepat secara ilmiah \n 4.	Mencantumkan sumber belajar/informasi yang digunakan"/>
                             </LinearLayout>
                         </LinearLayout>
                     </RelativeLayout>

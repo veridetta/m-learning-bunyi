@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView petunjuk, kompetensi, peta, materi, latihan, tentang;
+    CardView petunjuk, kompetensi, peta, materi, latihan, tentang,exit;
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,13 @@ public class MainActivity extends AppCompatActivity {
         materi = findViewById(R.id.gel_bunyi);
         latihan = findViewById(R.id.latihan_soal);
         tentang = findViewById(R.id.tentang);
-
+        exit = findViewById(R.id.btn_exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
+            }
+        });
         // CARD KLIK
         petunjuk.setOnClickListener(new View.OnClickListener() {
             @Override

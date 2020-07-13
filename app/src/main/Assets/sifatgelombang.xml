@@ -87,20 +87,20 @@
         <soal>Apa yang harus Anda lakukan?
             Bukalah Simulasi 2 berikut lalu klik slits.
         </soal>
-        <web>bw2</web>
-        <ket>Simulasi 2. Difraksi Gelombang Bunyi
-            Sumber: https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_en.html
-        </ket>
         <soal>Setelah itu, atur lebar celah dengan menggeser ‘Slit Width’
             Berdasarkan simulasi diatas, apa yang terjadi pada gelombang datang jika lebar celah divariasikan?
         </soal>
     </coba>
+    <web>bw2</web>
+    <ket>Simulasi 2. Difraksi Gelombang Bunyi
+        Sumber: https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_en.html
+    </ket>
     <subjudul>4.	Gelombang bunyi mengalami perpaduan (interferensi)</subjudul>
     <teks>Gelombang bunyi mengalami gejala perpaduan gelombang atau interferensi, yang dibedakan menjadi dua yaitu interferensi konstruktif atau penguatan bunyi dan interferensi destruktif atau pelemahan bunyi. Berikut merupakan contoh simulasi interferensi dua buah sumber bunyi (Simulasi 4). Klik Interference, maka akan muncul tampilan berikut.</teks>
-    <web>bw2</web>
+    <!--<web>bw2</web>
     <ket>Simulasi 3 . Interferensi Gelombang Bunyi
         Sumber:https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_en.html
-    </ket>
+    </ket>-->
     <teks>Interferensi adalah sampainya dua buah sumber bunyi yang koheren ke telinga. Misalnya waktu kita berada di antara dua buah loud-speaker dengan frekuensi dan amplitudo yang sama atau hampir sama maka kita akan mendengar bunyi yang keras dan lemah secara bergantian. Gambar 34 menunjukkan contoh interferensi gelombang. Dua pengeras suara yang dijalankan sefase, memancarkan gelombang bunyi dengan frekuensi yang sama.</teks>
     <teks>Pada titik P ditempatkan mikrofon yang berjarak sama dari kedua pengeras suara. Puncak gelombang yang dipancarkan oleh dua pengeras suara pada waktu yang sama menempuh jarak yang sama, sehingga sampai di titik P pada waktu yang sama. Jadi, kedua gelombang itu sefase dan di titik P terjadi interferensi saling memperkuat (konstruktif).</teks>
     <gambar>dg7</gambar>
