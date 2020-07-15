@@ -38,6 +38,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.codesgood.views.JustifiedTextView;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -77,6 +78,7 @@ public class MekanismePendengaran extends AppCompatActivity {
     private static final String TAG = "SelectImageActivity";
     private static final int CHOOSE_FILE_REQUESTCODE = 8777;
     private static final int PICKFILE_RESULT_CODE = 8778;
+    public static final int PICK_IMAGE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -151,7 +153,7 @@ public class MekanismePendengaran extends AppCompatActivity {
                 };
                 if(anak.getNodeName().equals("teks")){
                     // add TextView
-                    TextView tv = new TextView(this);
+                    JustifiedTextView tv = new JustifiedTextView(this);
                     tv.setText(anak.getTextContent());
                     tv.setId(nomor);
                     tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
@@ -362,6 +364,18 @@ public class MekanismePendengaran extends AppCompatActivity {
                             tv.setPadding(5, 3, 0, 3);
                             konten.addView(tv);
                         }
+                        if(anak.getNodeName().equals("gambar")){
+                            // add ImageView
+                            Display display = getWindowManager().getDefaultDisplay();
+                            ImageView iv = new ImageView(konten.getContext());
+                            int resourceId = getResources().getIdentifier (anak.getTextContent(), "drawable", "com.vrcorp.mobilelearningfisika_gelombangbunyi");
+                            iv.setImageResource(resourceId);
+                            iv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                            //iv.setLayoutParams(parms);
+                            iv.setAdjustViewBounds(true);
+                            // float in = getResources().getDimension(R.dimen._90sdp);
+                            konten.addView(iv);
+                        }
                     }
                     final EditText editText2 = new EditText(this);
                     editText2.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -510,6 +524,18 @@ public class MekanismePendengaran extends AppCompatActivity {
                             tv.setPadding(5, 3, 0, 3);
                             konten.addView(tv);
                         }
+                        if(anak.getNodeName().equals("gambar")){
+                            // add ImageView
+                            Display display = getWindowManager().getDefaultDisplay();
+                            ImageView iv = new ImageView(konten.getContext());
+                            int resourceId = getResources().getIdentifier (anak.getTextContent(), "drawable", "com.vrcorp.mobilelearningfisika_gelombangbunyi");
+                            iv.setImageResource(resourceId);
+                            iv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                            //iv.setLayoutParams(parms);
+                            iv.setAdjustViewBounds(true);
+                            // float in = getResources().getDimension(R.dimen._90sdp);
+                            konten.addView(iv);
+                        }
                     }
                     final EditText editText2 = new EditText(this);
                     editText2.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -576,28 +602,9 @@ public class MekanismePendengaran extends AppCompatActivity {
         Log.i("Send email", "");
         String[] TO = {"veridetta@gmail.com"};
         String[] CC = {"xyz@gmail.com"};
-        String[] mimeTypes =
-                {"application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .doc & .docx
-                        "application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation", // .ppt & .pptx
-                        "application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xls & .xlsx
-                        "text/plain",
-                        "application/pdf",
-                        "application/zip"};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
-       // emailIntent.setType("*/*");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            emailIntent.setType(mimeTypes.length == 1 ? mimeTypes[0] : "*/*");
-            if (mimeTypes.length > 0) {
-                emailIntent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
-            }
-        } else {
-            String mimeTypesStr = "";
-            for (String mimeType : mimeTypes) {
-                mimeTypesStr += mimeType + "|";
-            }
-            emailIntent.setType(mimeTypesStr.substring(0,mimeTypesStr.length() - 1));
-        }
+        emailIntent.setType("image/*");
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
@@ -612,6 +619,16 @@ public class MekanismePendengaran extends AppCompatActivity {
                     "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
+
+    /* Choose an image from Gallery */
+    void openImageChooser() {
+        Intent intent = new Intent();
+        intent.setType("image/png");
+        intent.setAction(Intent.ACTION_PICK);
+        //intent.addCategory(Intent.CATEGORY_OPENABLE);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+    }
+
     private void handlePermission() {
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
@@ -645,42 +662,14 @@ public class MekanismePendengaran extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-    /* Choose an image from Gallery */
-    void openImageChooser() {
-        String[] mimeTypes =
-                {"application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .doc & .docx
-                        "application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation", // .ppt & .pptx
-                        "application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xls & .xlsx
-                        "text/plain",
-                        "application/pdf",
-                        "application/zip"};
-        Intent intent = new Intent();
-        //intent.setType("*/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            intent.setType(mimeTypes.length == 1 ? mimeTypes[0] : "*/*");
-            if (mimeTypes.length > 0) {
-                intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
-            }
-        } else {
-            String mimeTypesStr = "";
-            for (String mimeType : mimeTypes) {
-                mimeTypesStr += mimeType + "|";
-            }
-            intent.setType(mimeTypesStr.substring(0,mimeTypesStr.length() - 1));
-        }
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICKFILE_RESULT_CODE);
-    }
-
     public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Log.d(TAG, "Image Path : " +resultCode+requestCode);
         new Thread(new Runnable() {
             @Override
             public void run() {
-                if (resultCode == RESULT_OK) {
-                    if (requestCode == SELECT_PICTURE) {
+                if (requestCode == PICK_IMAGE) {
+                    if (resultCode == -1) {
                         // Get the url from data
                         final Uri selectedImageUri = data.getData();
                         if (null != selectedImageUri) {
@@ -688,7 +677,7 @@ public class MekanismePendengaran extends AppCompatActivity {
                             String path = getPathFromURI(selectedImageUri);
                             URI= Uri.parse("file://"+path.toString());
                             //Uri.parse("file://" + attachmentFile);
-                            Log.i(TAG, "Image Path : " + path+"path uri "+selectedImageUri+ "urii" +URI);
+                            Log.d(TAG, "Image Path : " + path+"path uri "+selectedImageUri+ "urii" +URI);
                             // Set the image in ImageView
                         }
                     }
@@ -730,7 +719,6 @@ public class MekanismePendengaran extends AppCompatActivity {
                 });
         alertDialog.show();
     }
-
     public static void openAppSettings(final Activity context) {
         if (context == null) {
             return;

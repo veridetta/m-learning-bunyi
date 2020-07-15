@@ -20,10 +20,10 @@
             Aspek K.Komunikasi: Menuliskan ide/pendapat yang relevan degan konten.
         </judul>
         <soal>Setelah anda menonton video ‘percobaan sederhana pelayangan bunyi’, Berikanlah pendapat mengenai syarat terjadinya resonansi! Gunakan berbagai jenis media untuk mencari informasi (tuliskan sumber informasi yang digunakan)!</soal>
-        <gambar>gg2</gambar>
-        <coba>
-            <judul>Aspek Kognitif: Menentukan frekuensi layangan bunyi dalam fenomena sehari-hari</judul>
-            <soal>Seorang anak diam di pinggir jalan. Pada saat itu dari samping kiri bergerak mobil ambulan dengan kecepatan 72 km/jam sambil membunyikan sirine yang frekuensinya 1.000 Hz dan dari sebelah kanan bergerak sebuah bis dengan kecepatan 54 km/jam sambil membunyikan klaksonnya yang mempunyai frekuensi 1000 Hz. Apabila pada saat itu kecepatan bunyi di udara 340 m/s dan udara di sekitar dianggap tenang, tentukan berapa frekuensi layangan bunyi yang didengar anak tersebut!</soal>
-        </coba>
+    </coba>
+    <gambar>gg2</gambar>
+    <coba>
+        <judul>Aspek Kognitif: Menentukan frekuensi layangan bunyi dalam fenomena sehari-hari</judul>
+        <soal>Seorang anak diam di pinggir jalan. Pada saat itu dari samping kiri bergerak mobil ambulan dengan kecepatan 72 km/jam sambil membunyikan sirine yang frekuensinya 1.000 Hz dan dari sebelah kanan bergerak sebuah bis dengan kecepatan 54 km/jam sambil membunyikan klaksonnya yang mempunyai frekuensi 1000 Hz. Apabila pada saat itu kecepatan bunyi di udara 340 m/s dan udara di sekitar dianggap tenang, tentukan berapa frekuensi layangan bunyi yang didengar anak tersebut!</soal>
     </coba>
 </materi>

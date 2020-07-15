@@ -38,4 +38,5 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer-core:2.7.3'
     implementation 'com.google.android.exoplayer:exoplayer-dash:2.7.3'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.7.3'
+    implementation 'com.codesgood:justifiedtextview:1.1.0'
 }
